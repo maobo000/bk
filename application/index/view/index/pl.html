@@ -6,91 +6,40 @@
     <link rel="stylesheet" id="open_social_css-css" href="/static/pl/os.css" type="text/css" media="all">
     <link rel="stylesheet" href="/static/pl/style(1).css" media="all">
     <link href="/static/pl/font-awesome.min.css" rel="stylesheet" media="screen">
+</head>
 <body class="home blog">
 <div class="placeholder"></div>
 <script src="/static/pl/hm.js"></script><script src="/static/pl/jquery.js"></script>
-<script>window._deel = {
-    maillist: '',
-    maillistCode: '',
-    commenton: 0,
-    roll: [0, 0]
-}</script>
-<script type="text/javascript">$(function() {
-    $(window).scroll(function() {
-        $offset = $('.placeholder').offset(); //不能用自身的div，不然滚动起来会很卡
-        if ($(window).scrollTop() > $offset.top) {
-            $('.header').css({
-                'position': 'fixed',
-                'top': '0px',
-                'left': $offset.left + 'px',
-                'z-index': '999'
-            });
-            $(".container").css({
-                "margin-top": "93px"
-            });
-        } else {
-            $('.header').removeAttr('style');
-            $('.container').removeAttr('style');
-        }
-    });
-})
-</script>
 <header class="header">
     <div class="navbar">
-        <p class="logo">
-            <a href="http://www.zbboke.com/" title="张兵个人博客" alt="个人博客"><img style="display: block;" alt="个人博客" src="/static/pl/logo.png"></a></p>
         <ul class="nav">
-            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="http://www.zbboke.com/">首页</a></li>
-
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home">
+                <a href="{:url('index/Index/index')}">首页</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                <a href="http://www.zbboke.com/about/">关于</a>
+                <a href="{:url('index/Index/about')}">关于</a>
                 <ul class="sub-menu">
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.zbboke.com/about/">关于我</a></li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.zbboke.com/lxw/">友链互换</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                        <a href="">关于我</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                        <a href="">交友信息</a></li>
                 </ul></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home"><a href="http://www.zbboke.com/cz/">成长</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home">
+                <a href="{:url('index/Index/growup')}">成长</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
-                <a href="http://www.zbboke.com/xx/">学习</a>
+                <a href="">学习</a>
                 <ul class="sub-menu">
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.zbboke.com/xx/php/">php</a></li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.zbboke.com/xx/html/">html</a></li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.zbboke.com/xx/css/">css</a></li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.zbboke.com/xx/ajax/">ajax</a></li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a title="Dreamweaver" href="http://www.zbboke.com/xx/Dreamweaver/">Dreamw..</a></li>
-                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://www.zbboke.com/xx/Javascript/">JavaScript</a></li>
-                </ul></li>
-
-
-
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                        <a href="">php</a></li>
+                </ul>
+            </li>
             　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="http://www.zbboke.com/tp/">娱乐</a></li>
-
-
-
-
-
             　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="http://www.zbboke.com/yl/">海之城</a> </li>
-
-
-
-
             　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="http://www.zbboke.com/ly/">留言</a></li>
-
-
-
-
-
-
         </ul>
         <div class="menu pull-right">
             <form name="formsearch" action="http://www.zbboke.com/plus/search.php" method="get">
-
                 <input class="search-input" name="q" type="text" id="search-keyword" value="" required="required" placeholder=" 输入你要找的内容">
-
-
                 <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">
-
-
-
                     <i class="fa"></i>
                 </button>
             </form>
@@ -98,488 +47,156 @@
         </div>
     </div>
 </header>
-
-
-
-
-
-
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?7c0f70e6d8aaeb8ec75e153de1c7b516";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
-
-
-
-
-
-
 <section class="container">
     <div class="content-wrap">
-
-
-        <header class="archive-header" style="width:855px; float:left;">
-            <h1 style="width:600px; display:inline-block;">留言</h1>
-            <p style="float:right; margin:0px; line-height:40px;"><a href="http://www.zbboke.com//">主页</a> &gt; <a href="http://www.zbboke.com/ly/">留言</a> &gt; </p>
-        </header>
-
-        <div style="width:895px;" class="ds-thread" data-thread-key="" data-title="留言栏目" data-url=""></div>
-        <style>
-            .section-cbox-w{width:900px !important;}
-            #SOHUCS{width:74% !important; margin-left:0px !important; margin-right:0px !important;}
-        </style>
-
-        <div id="SOHUCS" sid="15"><div id="SOHU_MAIN"><div node-type="cy-collection-btn" class="cy-collection-btn"><i></i><span>收藏文章</span></div>
-            <div class="module-cmt-header">
-                <div class="cy-hidden">
-                    <button id="jump-to-kz"></button>
-                </div>
-                <div class="clear-g section-title-w">
-                    <div class="title-user-w">
-                        <div node-type="user" class="clear-g user-wrap-w user-login">
-                            <span node-type="user-name" class="wrap-name-w">小铁塔：</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="section-cbox-w">
-                    <div class="cbox-block-w clear-g">
-                        <div node-type="block-head-w" class="block-head-w block-head-login">
-                            <div node-type="avatar" class="head-img-w">
-                                <a href="javascript:void(0);">
-                                    <img node-type="user-head" src="/static/pl/fac494264beff70ed91fedf32783552b_default_1449555807065_jpg" width="42" height="42" alt="">
-                                    <div node-type="head-img-ie-mask" class="head-img-ie-mask"></div>
-                                </a>
-                                <div node-type="notice-node" style="display: none" class="cy-avatar-notice-node"></div>
-                            </div>
-                            <div node-type="header-login" class="header-login">登录</div>
-
-                            <img node-type="header-skin" class="header-skin">
-                            <div node-type="cy-hot-words" class="cy-hot-words"></div>
-                        </div>
-                        <div node-type="login-select" class="block-post-w">
-                            <div class="module-cmt-box">
-                                <!-- 展开状态 -->
-                                <div class="post-wrap-w">
-                                    <div class="post-wrap-border-l"></div>
-                                    <div class="post-wrap-border-r"></div>
-                                    <div node-type="post-wrap-main" class="post-wrap-main">
-                                        <div class="post-wrap-border-t">
-                                            <div node-type="post-wrap-border-t-l" class="post-wrap-border-t-l"></div>
-                                            <div node-type="post-wrap-border-t-r" class="post-wrap-border-t-r" style="margin-left: 131px;"></div>
-                                        </div>
-                                        <div class="wrap-area-w">
-                                            <div class="area-textarea-w">
-                                                <textarea node-type="textarea" name="" class="textarea-fw textarea-bf">有事没事说两句...</textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="clear-g wrap-action-w">
-                                        <div class="action-function-w">
-                                            <ul class="clear-g">
-                                                <li node-type="function-face" class="function-face-w">
-                                                    <a class="effect-w" href="javascript:void(0)">
-                                                        <i class="face-b"></i>
-                                                    </a>
-                                                </li>
-                                                <li node-type="function-uploading" class="function-uploading-w">
-                                                    <a class="effect-w" href="javascript:void(0)" title="上传图片">
-                                                        <i class="uploading-b"></i>
-                                                    </a>
-                                                    <div class="uploading-file-w">
-                                                        <a href="javascript:void(0);" name="" class="file-fw"></a>
-                                                    </div>
-                                                    <form style="display: none;"><input name="file" type="file" accept="image/jpg,image/jpeg,image/png"></form></li>
-                                            </ul>
-                                            <!-- 表情 -->
-                                            <div node-type="face-box" class="face-wrapper-dw">
-                                                <div node-type="face-cont" class="wrapper-cont-dw">
-                                                    <ul class="clear-g">
-                                                        <li>
-                                                            <span title="流汗" data_path="base" data-ubb="/流汗" class="face-item face_01"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="钱" data_path="base" data-ubb="/钱" class="face-item face_02"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="发怒" data_path="base" data-ubb="/发怒" class="face-item face_03"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="浮云" data_path="base" data-ubb="/浮云" class="face-item face_04"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="给力" data_path="base" data-ubb="/给力" class="face-item face_05"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="大哭" data_path="base" data-ubb="/大哭" class="face-item face_06"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="憨笑" data_path="base" data-ubb="/憨笑" class="face-item face_07"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="色" data_path="base" data-ubb="/色" class="face-item face_08"></span>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="clear-g">
-                                                        <li>
-                                                            <span title="奋斗" data_path="base" data-ubb="/奋斗" class="face-item face_09"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="鼓掌" data_path="base" data-ubb="/鼓掌" class="face-item face_10"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="鄙视" data_path="base" data-ubb="/鄙视" class="face-item face_11"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="可爱" data_path="base" data-ubb="/可爱" class="face-item face_12"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="闭嘴" data_path="base" data-ubb="/闭嘴" class="face-item face_13"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="疑问" data_path="base" data-ubb="/疑问" class="face-item face_14"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="抓狂" data_path="base" data-ubb="/抓狂" class="face-item face_15"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="惊讶" data_path="base" data-ubb="/惊讶" class="face-item face_16"></span>
-                                                        </li>
-                                                    </ul>
-                                                    <ul class="clear-g">
-                                                        <li>
-                                                            <span title="可怜" data_path="base" data-ubb="/可怜" class="face-item face_17"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="弱" data_path="base" data-ubb="/弱" class="face-item face_18"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="强" data_path="base" data-ubb="/强" class="face-item face_19"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="握手" data_path="base" data-ubb="/握手" class="face-item face_20"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="拳头" data_path="base" data-ubb="/拳头" class="face-item face_21"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="酒" data_path="base" data-ubb="/酒" class="face-item face_22"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="玫瑰" data_path="base" data-ubb="/玫瑰" class="face-item face_23"></span>
-                                                        </li>
-                                                        <li>
-                                                            <span title="打酱油" data_path="base" data-ubb="/打酱油" class="face-item face_24"></span>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div node-type="user-face-cont" class="wrapper-user-face-dw nano">
-                                                    <div class="nano-content">
-                                                        <ul class="clear-g">
-                                                            <li class="upload-face-btn"></li>
-                                                            <li class="manage-face-btn"></li>
-                                                            <li class="cancel-face-btn"></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div node-type="face-tab" class="action-face-tab-dw">
-                                                    <ul class="clear-g">
-                                                        <li node-type="official-face" class="official-face-btn active"></li>
-                                                        <li node-type="user-face" class="user-face-btn"></li>
-                                                    </ul>
-                                                </div>
-                                                <div node-type="confirm-box" class="cy-confirm-box">
-                                                    <div class="cy-confirm-text">
-                                                        <span>表情删除后不可恢复，是否删除</span>
-                                                    </div>
-                                                    <div class="cy-confirm-btn-row">
-                                                        <div class="cy-confirm-btn-cancel">取消</div>
-                                                        <div class="cy-confirm-btn-confirm">确定</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--  上传图片 --><!--  uploading-efw -->
-                                            <div node-type="uploading-wrapper" class="uploading-wrapper-dw uploading-efw ">
-                                                <div class="uploading-wrapper-dw-t"></div>
-                                                <div class="uploading-wrapper-dw-b"></div>
-                                                <div node-type="image-uploading" class="wrapper-loading-dw">
-                                                    <div class="loading-word-dw"><span class="word-icon-dw"></span>图片正在上传，请稍后...</div>
-                                                    <div class="loading-btn-dw">
-                                                        <a href="javascript:void(0)">取消上传</a>
-                                                    </div>
-                                                </div>
-                                                <div node-type="image-uploaded" class="wrapper-image-dw">
-                                                    <div class="image-close-dw">
-                                                        <a href="javascript:void(0)"></a>
-                                                    </div>
-                                                    <div class="image-pic-dw">
-                                                        <img node-type="image-pic" alt="" src="http://www.zbboke.com/ly/">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="clear-g action-issue-w">
-                                            <div class="issue-btn-w">
-                                                <a href="javascript:void(0)">
-                                                    <button node-type="issue" class="btn-fw"></button>
-                                                </a>
-                                            </div>
-                                            <!--
-                                            <div class="issue-icon-w" node-type="share-icons">
-                                                </div>
-                                            -->
-                                        </div>
-                                        <div class="cbox-prompt-w" node-type="error-tips">
-                                            <span node-type="prompt-empty" class="prompt-empty-w">评论内容为空！</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- 放置cbox发布状态 -->
-                            <!-- 提示条 -->
-                            <!-- 零评论提示条 -->
-                            <div class="list-comment-empty-w">
-
-                            </div>
-                            <!-- 提示连接到快站社区 -->
-                            <!-- <div class="list-comment-kuaizhan-w">
-                                <div node-type="kuaizhan-prompt" class="kuaizhan-prompt-w">
-                                    <span class="prompt-text-w">点击查看更多精彩内容</span>
-                                </div>
-                            </div> -->
-                            <!--关闭评论-->
-                            <div class="list-close-comment-w">
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- 评论列表  S -->
-            <div node-type="module-cmt-list" class="module-cmt-list section-list-w">
-
-                <div class="cmt-list-type">
-                    <ul class="clear-g type-lists">
-                        <li class="type-list active">评论</li>
-                        <!-- <li class="type-list">热门</li> -->
+        <!--<header class="archive-header" style="width:855px; float:left;">-->
+            <!--<h1 style="width:600px; display:inline-block;">留言</h1>-->
+            <!--<p style="float:right; margin:0px; line-height:40px;"><a href="http://www.zbboke.com//">主页</a> &gt;-->
+                <!--<a href="http://www.zbboke.com/ly/">留言</a> &gt; </p>-->
+        <!--</header>-->
+        <!-- 多说评论框 start -->
+        <!-- 多说评论框 start -->
+        <!--<div style="width:895px;" class="ds-thread" data-thread-key="" data-title="留言栏目" data-url=""></div>-->
+        <!--<style>-->
+            <!--.section-cbox-w{width:900px !important;}-->
+            <!--#SOHUCS{width:74% !important; margin-left:0px !important; margin-right:0px !important;}-->
+        <!--</style>-->
+        <!-- 多说评论框 end -->
+        <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+        <!--PC和WAP自适应版-->
+        <div id="SOHUCS" sid="15">
+            <div node-type="face-box" class="face-wrapper-dw">
+                <div node-type="face-cont" class="wrapper-cont-dw">
+                    <ul class="clear-g">
+                        <li>
+                            <span title="流汗" data_path="base" data-ubb="/流汗" class="face-item face_01"></span>
+                        </li>
+                        <li>
+                            <span title="钱" data_path="base" data-ubb="/钱" class="face-item face_02"></span>
+                        </li>
+                        <li>
+                            <span title="发怒" data_path="base" data-ubb="/发怒" class="face-item face_03"></span>
+                        </li>
+                        <li>
+                            <span title="浮云" data_path="base" data-ubb="/浮云" class="face-item face_04"></span>
+                        </li>
+                        <li>
+                            <span title="给力" data_path="base" data-ubb="/给力" class="face-item face_05"></span>
+                        </li>
+                        <li>
+                            <span title="大哭" data_path="base" data-ubb="/大哭" class="face-item face_06"></span>
+                        </li>
+                        <li>
+                            <span title="憨笑" data_path="base" data-ubb="/憨笑" class="face-item face_07"></span>
+                        </li>
+                        <li>
+                            <span title="色" data_path="base" data-ubb="/色" class="face-item face_08"></span>
+                        </li>
                     </ul>
-                    <div class="cmt-list-border"></div>
-                    <div class="cmt-list-number">
-                        <span class="comment-number"><span class="cy-number">49</span>人参与,<span class="cy-number">18</span>条评论</span>
-                    </div>
+                    <ul class="clear-g">
+                        <li>
+                            <span title="奋斗" data_path="base" data-ubb="/奋斗" class="face-item face_09"></span>
+                        </li>
+                        <li>
+                            <span title="鼓掌" data_path="base" data-ubb="/鼓掌" class="face-item face_10"></span>
+                        </li>
+                        <li>
+                            <span title="鄙视" data_path="base" data-ubb="/鄙视" class="face-item face_11"></span>
+                        </li>
+                        <li>
+                            <span title="可爱" data_path="base" data-ubb="/可爱" class="face-item face_12"></span>
+                        </li>
+                        <li>
+                            <span title="闭嘴" data_path="base" data-ubb="/闭嘴" class="face-item face_13"></span>
+                        </li>
+                        <li>
+                            <span title="疑问" data_path="base" data-ubb="/疑问" class="face-item face_14"></span>
+                        </li>
+                        <li>
+                            <span title="抓狂" data_path="base" data-ubb="/抓狂" class="face-item face_15"></span>
+                        </li>
+                        <li>
+                            <span title="惊讶" data_path="base" data-ubb="/惊讶" class="face-item face_16"></span>
+                        </li>
+                    </ul>
+                    <ul class="clear-g">
+                        <li>
+                            <span title="可怜" data_path="base" data-ubb="/可怜" class="face-item face_17"></span>
+                        </li>
+                        <li>
+                            <span title="弱" data_path="base" data-ubb="/弱" class="face-item face_18"></span>
+                        </li>
+                        <li>
+                            <span title="强" data_path="base" data-ubb="/强" class="face-item face_19"></span>
+                        </li>
+                        <li>
+                            <span title="握手" data_path="base" data-ubb="/握手" class="face-item face_20"></span>
+                        </li>
+                        <li>
+                            <span title="拳头" data_path="base" data-ubb="/拳头" class="face-item face_21"></span>
+                        </li>
+                        <li>
+                            <span title="酒" data_path="base" data-ubb="/酒" class="face-item face_22"></span>
+                        </li>
+                        <li>
+                            <span title="玫瑰" data_path="base" data-ubb="/玫瑰" class="face-item face_23"></span>
+                        </li>
+                        <li>
+                            <span title="打酱油" data_path="base" data-ubb="/打酱油" class="face-item face_24"></span>
+                        </li>
+                    </ul>
                 </div>
+            </div>
+            <div node-type="module-cmt-list" class="module-cmt-list section-list-w">
                 <!-- 最新评论 -->
                 <div class="list-block-gw list-newest-w">
-                    <div node-type="cmt-list-title" class="block-title-gw">
-                        <ul class="clear-g">
-                            <li>
-                                <div class="title-name-gw title-name-bg">
-                                    <div class="title-name-gw-tag"></div>最新评论</div>
-                            </li>
-                        </ul>
+                        <script type="text/javascript">
+                            (function(){
+                                var appid = 'cyso1pvoU';
+                                var conf = 'prod_e60ebb78623efa881bbe92edd49ae923';
+                                var width = window.innerWidth || document.documentElement.clientWidth;
+                                if (width < 960) {
+                                    window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" >' +
+                                        '<\/script>');
+                                } else{
+                                    var loadJs=function(d,a){
+                                        var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;
+                                        var b=document.createElement("script");
+                                        // b.setAttribute("type","text/javascript");
+                                        // b.setAttribute("charset","UTF-8");
+                                        b.setAttribute("src",d);
+
+
+                                        if(typeof a==="function"){
+                                            if(window.attachEvent){b.onreadystatechange=function(){
+                                            // var e=b.readyState;
+
+                                                if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}
+                                            }
+
+                                            }else{b.onload=a}
+
+                                        }c.appendChild(b)};
+
+                                        loadJs("https://changyan.sohu.com/upload/changyan.js",
+                                            function(){window.changyan.api.config({appid:appid,conf:conf})});
+                                }
+                            })
+                            ();
+                        </script>
                     </div>
-                    <div node-type="cmt-list" id="cy-cmt-list" style="position: relative;"><div node-type="cmt-item" data-id="1596810750" data-user-id="100001255244" data-platform-id="15" class="clear-g block-cont-gw">
-                        <div class="cont-head-gw">
-                            <div class="head-img-gw">
-                                <a node-type="photo" href="javascript:;" title="小铁塔">
-                                    <div class="img-corner"></div>
-                                    <img src="/static/pl/fac494264beff70ed91fedf32783552b_default_1449555807065_jpg(1)" width="42" height="42" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="cont-msg-gw">
-                            <div class="msg-wrap-gw">
-                                <div class="wrap-user-gw global-clear-spacing">
-                                    <span class="user-time-gw">6分钟前</span>
-                                    <span node-type="nickname" class="user-name-gw"><a href="javascript:void(0)">小铁塔</a></span><!-- 管理员、铭牌图标 -->
-                                    <span class="user-level-gw user-1-4-gw user-2-gw">
-    <i>冒泡</i>
-</span><!-- 管理员、铭牌图标 END -->
-
-                                    <span class="user-address-gw">[<i>河南省郑州市</i>网友]</span>
-                                </div>
-
-
-                                <div class="wrap-issue-gw">
-                                    <p class="issue-wrap-gw"><span class="wrap-word-gw">搜索</span></p>
-                                    <div class="cy-see-more">
-                                        <span></span><i></i>
-                                    </div>
-                                </div>
-                                <!-- 图片展示 -->
-
-                                <div node-type="btns-bar" class="clear-g wrap-action-gw">
-                                    <div node-type="action-click-gw" class="action-click-gw global-clear-spacing">
-                                        <i class="gap-gw"></i>
-                                        <span node-type="report" class="click-report-gw"><a href="javascript:void(0)"><i class="icon-gw icon-flag"></i><em>举报</em></a></span><i class="gap-gw"></i><span node-type="reply" class="click-reply-gw"><a href="javascript:void(0)">回复</a></span>
-                                        <i class="gap-gw"></i>
-                                        <span node-type="support" class="click-ding-gw">
-                        <a href="javascript:;"><i class="icon-gw icon-ding-bg"></i><em class="icon-name-bg"></em></a>
-                    </span>
-
-                                        <i class="gap-gw"></i>
-                                        <span node-type="oppose" class="click-cai-gw">
-                        <a href="javascript:;"><i class="icon-gw icon-cai-bg"></i><em class="icon-name-bg"></em></a>
-                    </span>
-
-                                        <i class="gap-gw"></i><span node-type="prop" class="click-prop-gw"><span class="prop-span"><a href="javascript:void(0)"></a></span></span></div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div><div node-type="cmt-item" data-id="1595955627" data-user-id="100001236657" data-platform-id="15" class="clear-g block-cont-gw">
-                        <div class="cont-head-gw">
-                            <div class="head-img-gw">
-                                <a node-type="photo" href="javascript:;" title="陌生人">
-                                    <div class="img-corner"></div>
-                                    <img src="/static/pl/fac494264beff70ed91fedf32783552b_default_1449628055246_jpg" width="42" height="42" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="cont-msg-gw">
-                            <div class="msg-wrap-gw">
-                                <div class="wrap-user-gw global-clear-spacing">
-                                    <span class="user-time-gw">2019年5月13日 14:32</span>
-                                    <span node-type="nickname" class="user-name-gw"><a href="javascript:void(0)">陌生人</a></span><!-- 管理员、铭牌图标 -->
-                                    <span class="user-level-gw user-1-4-gw user-1-gw">
-    <i>潜水</i>
-</span><!-- 管理员、铭牌图标 END -->
-
-                                    <span class="user-address-gw">[<i>河南省郑州市</i>网友]</span>
-                                </div>
-
-
-                                <div class="wrap-issue-gw">
-                                    <p class="issue-wrap-gw"><span class="wrap-word-gw">emmmm..........</span></p>
-                                    <div class="cy-see-more">
-                                        <span></span><i></i>
-                                    </div>
-                                </div>
-                                <!-- 图片展示 -->
-
-                                <div node-type="btns-bar" class="clear-g wrap-action-gw">
-                                    <div node-type="action-click-gw" class="action-click-gw global-clear-spacing">
-                                        <i class="gap-gw"></i>
-                                        <span node-type="report" class="click-report-gw"><a href="javascript:void(0)"><i class="icon-gw icon-flag"></i><em>举报</em></a></span><i class="gap-gw"></i><span node-type="reply" class="click-reply-gw"><a href="javascript:void(0)">回复</a></span>
-                                        <i class="gap-gw"></i>
-                                        <span node-type="support" class="click-ding-gw">
-                        <a href="javascript:;"><i class="icon-gw icon-ding-bg"></i><em class="icon-name-bg"></em></a>
-                    </span>
-
-                                        <i class="gap-gw"></i>
-                                        <span node-type="oppose" class="click-cai-gw">
-                        <a href="javascript:;"><i class="icon-gw icon-cai-bg"></i><em class="icon-name-bg"></em></a>
-                    </span>
-
-                                        <i class="gap-gw"></i><span node-type="prop" class="click-prop-gw"><span class="prop-span"><a href="javascript:void(0)"></a></span></span></div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                                        <i class="gap-gw"></i>
-                                        <span node-type="oppose" class="click-cai-gw">
-                        <a href="javascript:;"><i class="icon-gw icon-cai-bg"></i><em class="icon-name-bg"></em></a>
-                    </span>
-
-                                        <i class="gap-gw"></i><span node-type="prop" class="click-prop-gw"><span class="prop-span"><a href="javascript:void(0)"></a></span></span></div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div><div node-type="cmt-item" data-id="1527795034" data-user-id="218242852" data-platform-id="3" class="clear-g block-cont-gw">
-                        <div class="cont-head-gw">
-                            <div class="head-img-gw">
-                                <a node-type="photo" href="javascript:;" title="忘记那心酸">
-                                    <div class="img-corner"></div>
-                                    <img src="/static/pl/11111.gif" width="42" height="42" alt="">
-                                </a>
-                            </div>
-                        </div>
-        <script type="text/javascript">
-            (function(){
-                var appid = 'cyso1pvoU';
-                var conf = 'prod_e60ebb78623efa881bbe92edd49ae923';
-                var width = window.innerWidth || document.documentElement.clientWidth;
-                if (width < 960) {
-                    window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-    </div>
-
-
-
-    <aside class="sidebar">
-        <div class="widget d_textbanner">
-            <a class="style03" target="_blank" href="http://www.zbboke.com/">
-                <strong>广告位</strong>
-                <h2>文字广告位</h2>
-            </a>
+                </div>
+            </div>
         </div>
-    </aside>﻿
-
-
+    </div>
 </section>
 
-<footer class="footer">
-    <div class="footer-inner">
-        <div style="padding:0 20px;overflow:hidden;">
-            <div class="copyright pull-left">
-
-                <a href="http://www.zbboke.com/about/">关于</a> |
-
-                <a href="http://www.zbboke.com/xx/">学习</a> |
-
-                <a href="http://www.zbboke.com/tp/">娱乐</a> |
-
-                <a href="http://www.zbboke.com/cz/">成长</a> |
-
-                <a>Copyright © 2016, zhangbing All Rights Reserved. </a>| <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">苏ICP备16050559号</a> <a target="_blank" href="http://www.zbboke.com/ly/sitemap.htm">网站地图</a></div>
-            <div class="trackcode pull-right"><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260588650'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260588650%26online%3D1%26show%3Dline' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1260588650"><a href="https://www.cnzz.com/stat/website.php?web_id=1260588650" target="_blank">站长统计</a><a href="https://www.cnzz.com/stat/website.php?web_id=1260588650" target="_blank"> |  今日IP[69] | 今日PV[243] | 昨日IP[79] |  昨日PV[258] | </a><a href="https://www.cnzz.com/stat/website.php?web_id=1260588650&amp;method=online" target="_blank">当前在线[0]</a></span><script src="/static/pl/z_stat(2).php" type="text/javascript"></script><script src="/static/pl/core(2).php" charset="utf-8" type="text/javascript"></script></div>
-        </div>
-
-    </div>
-
-</footer>
-<script type="text/javascript">
-    $(document).ready(function() {
-        $(function(){
-            var scrollDiv = document.createElement('div');
-            $(scrollDiv).attr('id','toTop').html('<ul><li class="backBtn" title="返回顶部"><a href="javascript:;" class="icon_backTo"></a></li></ul>').appendTo('body');
-            $(window).scroll(function(){
-                if($(this).scrollTop() > 300){
-                    $('.backBtn').fadeIn();
-                }else{
-                    $('.backBtn').fadeOut();
-                }
-            });
-            $('.backBtn').click(function(){
-                $('body,html').animate({scrollTop:0},300);
-            })
-        })
-
-    });
-</script>
-<script>
-    (function(){
-        var bp = document.createElement('script');
-        var curProtocol = window.location.protocol.split(':')[0];
-        if (curProtocol === 'https') {
-            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-        }
-        else {
-            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-        }
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(bp, s);
-    })();
-</script>
-
-
-
-<script src="/static/pl/9562.js"></script><script>_pe.subscribe();</script>
-
-
-<div id="toTop"><ul><li class="backBtn" title="返回顶部" style="display: none;"><a href="javascript:;" class="icon_backTo"></a></li></ul></div></body></html>
+<div id="toTop">
+    <ul>
+        <li class="backBtn" title="返回顶部" style="display: none;">
+            <a href="javascript:;" class="icon_backTo"></a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

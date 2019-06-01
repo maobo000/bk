@@ -36,7 +36,6 @@ class Article extends Controller
                 'content.require' => '文章内容为必填项',
                 'content.length' => '文章内容过短或者过长',
                 'status.in' => '文章状态有误'
-
             ];
             $check = $this->validate($data, $rule, $msg);
             if ($check !== true){
@@ -45,9 +44,9 @@ class Article extends Controller
 
             $data['aid'] = session('adminLoginInfo')->id;
             //入库
-
             if (\app\admin\model\article::create($data)){
-                $this->success('添加成功', url('admin/Article/lists'));
+//                $this->success('添加成功', url('admin/Article/lists'));
+                return ['msg'=>'添加成功','code'=>1,'url'=>'admin/Article/lists'];
             }else{
                 $this->error('添加失败');
             }
@@ -76,10 +75,11 @@ class Article extends Controller
     public function lists()
     {
 
-        $list = \app\admin\model\article::with('category')->order('create_time DESC')->paginate(1);
+        $list = \app\admin\model\article::with('category')->order('create_time DESC')->paginate(3);
         $this->assign('list', $list);
         return $this->fetch();
     }
+
 
     public function changeStatus()
     {
@@ -103,6 +103,66 @@ class Article extends Controller
 
 
     }
+
+
+    public function delete()
+    {
+        $id = $this->request->param('id');
+        if (empty($id)) {
+            $this->error('失败');
+        }
+        //从库里查询并删除
+        $a = \think\Db::table('article')->where('id', $id)->delete();
+        if(empty($a)) {
+            return $this->error('失败');
+        }else{
+            return $this->success('成功');
+        }
+    }
+
+    public function update()
+    {
+        $re = $this->request;
+        if ($re->isPost()) {
+            $id = $this->request->param('id');
+            $data = $re->only(['title','author', 'content']);
+            $rule = [
+                'title' => 'require|length:1,50',
+                'author' => 'length:2,10',
+                'content' => 'require|length:10,65535',
+            ];
+            $msg = [
+                'title.require' => '文章标题为必填项',
+                'title.length' => '文章标题应在1-50字之间',
+                'author.length' => '署名长度应在2-10个字之间',
+                'content.require' => '文章内容为必填项',
+                'content.length' => '文章内容过短或者过长',
+            ];
+
+            $check = $this->validate($data, $rule, $msg);
+            if ($check !== true) {
+                $this->error($check);
+            }
+            $cctv = \app\admin\model\article::get($id);
+            if ($cctv->save($data)) {
+                $this->success('修改成功',url('admin/Article/lists'));
+            } else {
+                $this->error('修改失败2');
+            }
+
+        }
+        if ($re->isGet()) {
+
+            $id = $this->request->param('id');
+
+            $list = \app\admin\model\article::get($id)->toArray();
+            $this->assign('list', $list);
+            return $this->fetch();
+        }
+    }
+
+
+
 
     public function uploadImage()
     {
@@ -130,7 +190,6 @@ class Article extends Controller
             return json(['code'=>0, 'info'=>$image->getError()]);
         }
     }
-
     public function ueUpload()
     {
         $configData = file_get_contents("static/ui/library/ue/config.json");

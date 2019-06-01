@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>成长</title>
-    <link rel="stylesheet" href="/static/ui/css/style.css" media="all">
-    <link rel="stylesheet" href="/static/ui/css/swiper.min.css" media="all">
+    <link rel="stylesheet" href="/static/ui/css/blogs/style.css" media="all">
+    <link rel="stylesheet" href="/static/ui/css/blogs/swiper.min.css" media="all">
     <link href="/static/ui/library/um/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 </head>
+
+<body>
 <style type="text/css">
     .article-container{
         background-color: #ffffff;
@@ -119,7 +120,6 @@
         float:right;
     }
 </style>
-<body>
     <header class="header" style="position: fixed; top: 0px; left: 0px; z-index: 999;">
         <div class="navbar">
             <ul class="nav">
@@ -171,165 +171,85 @@
             s.parentNode.insertBefore(hm, s);
         })();
     </script>
-    <section class="container">
-        <div class="content-wrap">
-            <div class="content">
-                <header class="archive-header">
+    <section class="container" style="width: 1200px;height: 600px;">
+        <div class="content-wrap" style="width: 1200px;height: 600px;">
+            <div class="content" style="width: 1200px;height: 600px;">
+                <header class="archive-header" style="width: 1170px;">
                     <h1 style="width:600px; display:inline-block;">成长</h1>
-                    <p style="float:right; margin:0px; line-height:40px;"><a href="http://www.zbboke.com//">主页</a>
-                        <a href="http://www.zbboke.com/cz/">成长</a> &gt; </p>
+                    <p style="float:right; margin:0px; line-height:40px;">
+                        <a href="">主页></a>
+                        <a href="">成长</a></p>
                 </header>
 
-
-
-                <div style="background-color:#fff;width: 895px;height: 900px;">
-                    <div class="article-container">
-                        <div class="article_head">
-                            <h1 class="title">标题</h1>
-                            <div class="article_r">
-                                <span class="pulisher">小白 发表</span>
-                                <span class="time">  2015:10:10</span>
-                                <span class="article_view" title="阅读"> 阅读(100)</span>
-                                <span class="article_comments" title="评论"> <a href="#" onclick=""> 评论</a>(100)</span>
-                                <span class="article_del" data-id="${articleDto.id}"><a href="javascript:void(0);" onclick="" title="删除">删除</a></span>
-                            </div>
-                        </div>
-                        <div class="article_content">
-                            <p>话题内容</p>
-                        </div>
-                        <hr>
-                        <div class="comment_list">
-                            <h3 style="text-indent: 2em;">评论列表</h3>
-                            <hr>
-                            {foreach $company as $v}
-                            <div class="comment">
-                                <div class="imgdiv">
-                                    <img class="imgcss"  src="/static/img/icon.png"/>
-                                </div>
-                                <div class="conmment_details">
-                                    <div style="float:left;">
-                                        <span class="comment_name">{$v.create_time}</span>     
-                                        <span>22分钟前</span>
-                                    </div>
-                                    <div class="del">
-                                        <i class="icon layui-icon" >赞(164)</i>
-                                        <a class="del_comment" data-id="1"> <i class="icon layui-icon" >删除</i></a>
-                                    </div>
-                                    <div class="comment_content">{$v.content}
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    {/foreach}
-                    <form action="{:url('index/Index/add_say')}" method="post">
-                        <div class="form-group">
-                            <div>
-                                <textarea rows="16" name="content" style="height: 200px; width: 890px;" id="editor1" class="form-control"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div>
-                                <input type="hidden" name="id" value="{$info.id}">
-                                <button class="btn btn-primary btn-xs" type="submit">确认添加</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-
-
-                <div class="pagenavi clearfix">
-                    <div class="pages">
-                        <li><a>首页</a></li>
-                        <li class="thisclass"><a>1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">下一页</a></li>
-                        <li><a href="">末页</a></li>
-                        <li><span class="pageinfo">共 <strong>3</strong>页<strong>28</strong>条</span></li>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <aside class="sidebar">
-            <div class="widget d_postlist">
-                <h3 class="widget_tit">频道点击排行</h3>
-                <ul>
-                    <li>
-                        <a href="http://www.zbboke.com/cz/709.html">
-                            <span class="thumbnail">
-                                <img src="" data-bd-imgshare-binded="1"></span>
-                                <span class="text">今年我二十七八岁</span>
-                                <span class="muted">2017-10-14</span>
-                                <span class="muted">
-                                <span class="ds-thread-count" data-replace="1">1510次阅读</span>
-                            </span>
+                <div style="width: 1200px;height: 100%;">
+                    {foreach $id as $v}
+               </hr>
+                <article class="excerpt" style="padding: 20px 20px 0 256px; ">
+                    <div class="focus">
+                        <a href="{:url('index/Index/study')}" class="thumbnail" target="_blank">
+                            <img src="" alt="" title="" data-bd-imgshare-binded="1">
                         </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="widget d_textbanner">
-                <a class="style03" target="_blank" href="http://www.zbboke.com/">
-                    <strong>广告位</strong>
-
-                    <img src="/static/img/1.png/" class="gg" alt="" data-bd-imgshare-binded="1">
-                </a>
-            </div>
-            <div class="widget d_textbanner" style=" margin-top:10px;    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);">
-                <a class="style03" target="_blank" href="http://www.zbboke.com/">
-                    <strong>分享</strong>
-                </a>
-
-                <div class="bdsharebuttonbox bdshare-button-style0-32" data-bd-bind="1559286305150"><a href="http://www.zbboke.com/cz/#" class="bds_more" data-cmd="more"></a><a href="http://www.zbboke.com/cz/#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="http://www.zbboke.com/cz/#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="http://www.zbboke.com/cz/#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="http://www.zbboke.com/cz/#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="http://www.zbboke.com/cz/#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
-                <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-
-                <style>
-                    .bdshare-button-style0-32 a{    padding: 0 3px 3px; min-height:32px;}
-                    .bdsharebuttonbox{margin-left:10px;}
-                </style>
-            </div></aside>﻿
-    </section>
-    <footer class="footer">
-        <div class="footer-inner">
-            <div style="padding:0 20px;overflow:hidden;">
-                <div class="copyright pull-left">
-
-                    <a href="http://www.zbboke.com/about/">关于</a> |
-
-                    <a href="http://www.zbboke.com/xx/">学习</a> |
-
-                    <a href="http://www.zbboke.com/tp/">娱乐</a> |
-
-                    <a href="http://www.zbboke.com/cz/">成长</a> |
-
-                    <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">苏ICP备16050559号</a> <a target="_blank" href="http://www.zbboke.com/cz/sitemap.htm">网站地图</a></div>
-                <div class="trackcode pull-right">
-                    <span id="cnzz_stat_icon_1260588650"><a href="https://www.cnzz.com/stat/website.php?web_id=1260588650" target="_blank">站长统计</a>
-                        <a href="https://www.cnzz.com/stat/website.php?web_id=1260588650" target="_blank"> |  今日IP[36] | 今日PV[124] | 昨日IP[79] |  昨日PV[258] | </a>
-                        <a href="https://www.cnzz.com/stat/website.php?web_id=1260588650&amp;method=online" target="_blank">当前在线[4]</a>
+                    </div>
+                    <header>
+                        <h2>
+                            <a href="{:url('index/Index/study')}" title="" target="_blank">{$v.title}</a>
+                        </h2>
+                    </header>
+                    <a class="note" href="">{$v.content|raw}</a>
+                    <a href="{:url('index/Index/study',['id'=>$v['id']])}" class="search-link">{:url('index/Index/study', ['id'=>$v['id']], true, true)}方式</a>
+                    <span class="muted">
+                        <i class="icon-user icon12"></i>作者：{$v.author}</span>
+                    <span style="size: 8px;" class=""><i class=""></i> 2018-07-07 </span>
+                    <span class="muted"><i class="ico icon-eye-open icon12"></i>  822次浏览</span>
+                    <span class="muted">个人博客：[<a href="">海之城</a>]
                     </span>
+
+                </article>
+                {/foreach}
+
                 </div>
             </div>
-
+            <!--<h1 style="width:600px; display:inline-block;">评论：</h1>-->
+            <!--<form action="{:url('index/Index/')}" >-->
+                <!--<div class="form-group">-->
+                    <!--<div>-->
+                        <!--<hr>-->
+                        <!--<textarea rows="16" name="content" style="height: 400px; width: 1200px;" id="editor1" class="form-control"></textarea>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="form-group">-->
+                    <!--<div>-->
+                        <!--<input type="hidden" name="id" value="">-->
+                        <!--<button class="btn btn-primary btn-xs" type="submit">确认添加</button>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</form>-->
+            <div class="pages">
+                <li><a>首页</a></li>
+                <li class="thisclass"><a>1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">下一页</a></li>
+                <li><a href="">末页</a></li>
+                <li><span class="pageinfo">共 <strong>3</strong>页<strong>28</strong>条</span></li>
+            </div>
         </div>
 
-    </footer>
+    </section>
 </body>
+
 <script src="/static/ui/js/jquery.min.js?v=2.1.4"></script>
 <script src="/static/ui/js/bootstrap.min.js?v=3.3.6"></script>
 <script src="/static/ui/library/um/umeditor.config.js"></script>
 <script src="/static/ui/library/um/umeditor.js"></script>
+</body>
 <script type="text/javascript">
-
-    UM.getEditor('editor1');
-    // var ue = UM.getEditor('editor1', {
-    //     // toolbar:['source', 'italic', 'underline',
-    //     //     'formatmatch', 'blockquote','preview', 'horizontal', 'fontfamily',
-    //     //     'fontsize', 'insertimage','link','forecolor',
-    //     // ]
-    // });
+    var ue = UM.getEditor('editor1', {
+        // toolbar:['source', 'italic', 'underline',
+        //     'formatmatch', 'blockquote','preview', 'horizontal', 'fontfamily',
+        //     'fontsize', 'insertimage','link','forecolor',
+        // ]
+    });
 </script>
 </html>
 

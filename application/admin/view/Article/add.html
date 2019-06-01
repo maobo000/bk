@@ -97,6 +97,7 @@
 <script src="/static/ui/library/ue/ueditor.all.js"></script>
 <script src="/static/ui/library/webuploader/webuploader.js"></script>
 
+
 <script>
     var ue = UE.getEditor('editor1', {
         serverUrl:"{:url('admin/Article/ueUpload')}",
@@ -129,7 +130,8 @@
         }else {
             $.post('{:url("admin/Article/ajaxCategory")}', {id: id}, function (e) {
                 if (e.length){
-                    var str = '<div class="col-sm-2"><select class="form-control m-b category" name="category_id"><option value="0">请选择分类</option>';
+                    var str = '<div class="col-sm-2"><select class="form-control m-b category" name="category_id">' +
+                        '<option value="0">请选择分类</option>';
                     for (var j in e){
                         var d = e[j];
                         str += '<option value="'+d.id+'">'+d.name+'</option>';
@@ -152,12 +154,13 @@
     $('#btn').click(function () {
         var data = $('#form').serialize();
         $.post('', data, function (e) {
+
             if (e.code) {
-                layer.alert(e.msg, {icon: 1}, function () {
-                    location.href = e.url;
-                })
+                console.log(e);
+                alert(e.msg);
+                self.location.href='/'+e.url;
             }else{
-                layer.alert(e.msg, {icon: 2})
+                alert(e.msg);
             }
         })
     });
@@ -199,7 +202,6 @@
             layer.alert(res.info, {icon: 2})
         }
     });
-
 </script>
 
 </body>

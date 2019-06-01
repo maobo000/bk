@@ -2,9 +2,114 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>评论</title>
+    <link rel="stylesheet" href="/static/ui/css/blogs/style.css" media="all">
+    <link rel="stylesheet" href="/static/ui/css/blogs/swiper.min.css" media="all">
+    <link href="/static/ui/library/um/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-qqa wertyuikl
+
+<header class="header" style="position: fixed; top: 0px; left: 0px; z-index: 999;">
+    <div class="navbar">
+        <ul class="nav">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home">
+                <a href="{:url('index/Index/index')}">首页</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="{:url('index/Index/about')}">关于</a>
+                <ul class="sub-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                        <a href="">关于我</a></li>
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                        <a href="">交友信息</a></li>
+                </ul></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home">
+                <a href="{:url('index/Index/growup')}">成长</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">学习</a>
+                <ul class="sub-menu">
+                    <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                        <a href="">php</a></li>
+                </ul></li>
+
+            　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <a href="">娱乐</a></li>
+
+            　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <a href="">海之城</a> </li>
+
+            　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+            <a href="">留言</a></li>
+        </ul>
+        <div class="menu pull-right">
+            <form name="formsearch" action="http://www.zbboke.com/plus/search.php" method="get">
+                <input class="search-input" name="q" type="text" id="search-keyword" value="" required="required" placeholder=" 输入你要找的内容">
+                <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">
+                    <i class="fa"></i>
+                </button>
+            </form>
+
+        </div>
+    </div>
+</header>
+
+<section class="container" style="margin-top: 93px;">
+    {foreach $list as $v}
+    <div class="content-wrap">
+        <div class="content">
+            <header class="article-header">
+                <h1 class="article-title"></h1><h1>{$v.title}</h1>
+                <div class="meta">
+                    <span class="muted"><i class="icon-user icon12"></i>{$v.title}</span>
+                    <time class="muted"><i class="ico icon-time icon12"></i>2018-07-07 </time>
+                    <i class="ico icon-eye-open icon12"></i>1018次浏览</span>
+                </div>
+            </header>
+            <article class="article-content">
+                <div style="text-align: center;">
+                    <div>{$v.content|raw}<br><br>
+                    </div>
+            </article>
+        </div>
+    </div>
+    {/foreach}
+
+    <h1 style="width:600px; display:inline-block;">评论：</h1>
+    <form action="{:url('index/Index/add_say')}" >
+        <div class="form-group">
+            <div>
+                <hr>
+                <textarea rows="16" name="content" style="height: 400px; width: 900px;" id="editor1" class="form-control"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div>
+                <input type="hidden" name="id" value="{}">
+                <button class="btn btn-primary btn-xs" type="submit">确认添加</button>
+            </div>
+        </div>
+    </form>
+
+    <div class="pages">
+        <li><a>首页</a></li>
+        <li class="thisclass"><a>1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">下一页</a></li>
+        <li><a href="">末页</a></li>
+        <li><span class="pageinfo">共 <strong>3</strong>页<strong>28</strong>条</span></li>
+    </div>
+</section>
+<script src="/static/ui/js/jquery.min.js?v=2.1.4"></script>
+<script src="/static/ui/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="/static/ui/library/um/umeditor.config.js"></script>
+<script src="/static/ui/library/um/umeditor.js"></script>
+<script type="text/javascript">
+    var ue = UM.getEditor('editor1', {
+        // toolbar:['source', 'italic', 'underline',
+        //     'formatmatch', 'blockquote','preview', 'horizontal', 'fontfamily',
+        //     'fontsize', 'insertimage','link','forecolor',
+        // ]
+    });
+</script>
 </body>
 </html>
