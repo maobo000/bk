@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>个人博客</title>
+    <link rel="stylesheet" href="/static/ui/css/style.css" media="all">
+    <link rel="stylesheet" href="/static/ui/css/swiper.min.css" media="all">
+</head>
+<body>
+    <!--头部开始-->
+    <header class="header" style="position: fixed; top: 0px; left: 0px; z-index: 999;">
+        <div class="navbar">
+            <ul class="nav">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home">
+                    <a href="{:url('index/Index/growup')}">首页</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a href="{:url('index/Index/about')}">关于</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="">关于我</a></li>
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="">交友信息</a></li>
+                    </ul></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home">
+                    <a href="{:url('index/Index/growup')}">成长</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                    <a href="">学习</a>
+                    <ul class="sub-menu">
+                        <li class="menu-item menu-item-type-taxonomy menu-item-object-category">
+                            <a href="">php</a></li>
+                    </ul></li>
+
+                　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">娱乐</a></li>
+
+                　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="">海之城</a> </li>
+
+                　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
+                <a href="{:url('index/Index/pl')}">留言</a></li>
+            </ul>
+            <div class="menu pull-right">
+                <form name="formsearch" action="http://www.zbboke.com/plus/search.php" method="get">
+                    <input class="search-input" name="q" type="text" id="search-keyword" value="" required="required" placeholder=" 输入你要找的内容">
+                    <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">
+                        <i class="fa"></i>
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </header>
+    <!--头部结束-->
+    <script type="text/javascript" src="/static/ui/css/swiper.min.js"></script>
+    <section class="container" style="margin-top: 93px;">
+        <div class="banner banner-navbar">
+            <div class="swiper-container swiper-container-horizontal">
+                <div class="swiper-wrapper" style="transform: translate3d(-2460px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 1200px; margin-right: 30px;">
+                    <img src="/static/ui/css/banner_3.jpg" alt="个人博客" data-bd-imgshare-binded="1"></div>
+
+                    <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="0" style="width: 1200px; margin-right: 30px;">
+                        <img src="/static/ui/css/banner.gif" alt="个人博客" data-bd-imgshare-binded="1"></div>
+                    <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="1" style="width: 1200px; margin-right: 30px;">
+                        <img src="/static/ui/css/banner_1.jpg" alt="个人博客" data-bd-imgshare-binded="1"></div>
+
+                    <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 1200px; margin-right: 30px;">
+                        <img src="/static/ui/css/banner_3.jpg" alt="个人博客" data-bd-imgshare-binded="1"></div>
+                    <div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 1200px; margin-right: 30px;">
+                        <img src="/static/ui/css/banner.gif" alt="个人博客" data-bd-imgshare-binded="1"></div></div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span>
+                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                nextButton: '.swiper-button-next',
+                prevButton: '.swiper-button-prev',
+                paginationClickable: true,
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: 8000,
+                autoplayDisableOnInteraction: false,
+                loop: true
+            });
+        </script>
+        <div class="content-wrap">
+            <div class="content">
+                <div class="sticky">
+                    <h2 class="title" style="background:#F7F7F7;">特别推荐</h2>
+                    <ul>
+                        <li class="item"><a href="http://www.zbboke.com/cz/715.html" target="_blank">
+                            <img src="" alt="哈佛大学用这12张图，教育了10亿人_心灵鸡汤" data-bd-imgshare-binded="1">
+                            <h3>哈佛大学用这12张图，教育了10亿人_心灵鸡汤</h3>
+                            <p class="muted">很多人把感恩当成一种付出，其实感恩本身就是一种幸福。...</p></a></li>
+
+                        <li class="item"><a href="http://www.zbboke.com/cz/709.html" target="_blank">
+                            <img src="" alt="今年我二十七八岁" data-bd-imgshare-binded="1">
+                            <h3>今年我二十七八岁</h3>
+                            <p class="muted">我今年二十七八岁 不再乱买东西 月底开始算计 还了信用卡 开销多少 还剩下多少 该开始攒钱买房子了 我今年二十七八岁 偶尔会有寂寞 偶尔会挂念一个人 我今年二十七八岁 我开始追...</p></a></li>
+                    </ul>
+                </div>
+                <h2 class="title" style="background:#F7F7F7;">最新发布</h2>
+
+                <article class="excerpt">
+                    <div class="focus">
+                        <a href="http://www.zbboke.com/yl/753.html" class="thumbnail" target="_blank">
+                            <img src="" alt="用SVG画出拼图块，并实现拼图功能，请收下我的膝盖" title="用SVG画出拼图块，并实现拼图功能，请收下我的膝盖" data-bd-imgshare-binded="1"></a>
+                    </div>
+                    <header>
+                        <h2>
+                            <a href="http://www.zbboke.com/yl/753.html" title="用SVG画出拼图块，并实现拼图功能，请收下我的膝盖" target="_blank">用SVG画出拼图块，并实现拼图功能，请收下我的膝盖</a></h2>
+                    </header>
+                    <p class="note">如需看代码学习，请加Q群：169101712...</p>
+                    <p style="margin-top:40px;">
+              <span class="muted">
+                <i class="icon-user icon12"></i> 张兵 </span>
+                        <span class="muted">
+                <i class="ico icon-time icon12"></i> 2018-07-07</span>
+                        <span class="muted">
+                <i class="ico icon-eye-open icon12"></i>  822次浏览</span>
+                        <span class="muted">个人博客：[<a href="http://www.zbboke.com/yl/">海之城</a>]</span>
+                    </p>
+                </article>
+                <article class="excerpt">
+                    <div class="focus">
+                        <a href="http://www.zbboke.com/yl/752.html" class="thumbnail" target="_blank">
+                            <img src="" alt="现实“三毛”与我的故事" title="现实“三毛”与我的故事" data-bd-imgshare-binded="1"></a>
+                    </div>
+                    <header>
+                        <h2>
+                            <a href="http://www.zbboke.com/yl/752.html" title="现实“三毛”与我的故事" target="_blank">现实“三毛”与我的故事</a></h2>
+                    </header>
+                    <p class="note">讲个故事给大家听下: 隆隆ago 大家都听过三毛流浪记的故事 那是发生在旧社会的故事 三毛流浪在城市的某个角落 做着各种各样的事情，事情的内容 请各位自己回忆和脑补...</p>
+                    <p style="margin-top:40px;">
+              <span class="muted">
+                <i class="icon-user icon12"></i> 张兵 </span>
+                        <span class="muted">
+                <i class="ico icon-time icon12"></i> 2018-06-04</span>
+                        <span class="muted">
+                <i class="ico icon-eye-open icon12"></i>  477次浏览</span>
+                        <span class="muted">个人博客：[<a href="http://www.zbboke.com/yl/">海之城</a>]</span>
+
+                    </p>
+                </article>
+            </div>
+        </div>
+        <aside class="sidebar">
+            <div class="widget">
+                <h3 class="widget_tit">热门标签</h3>
+                <div class="tag_list">
+                    <ul>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=ajax&amp;search=" target="_blank">ajax</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=Dreamweaver&amp;search=" target="_blank">Dreamweaver</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=html&amp;search=" target="_blank">html</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=js&amp;search=" target="_blank">js</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=css&amp;search=" target="_blank">css</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=css&amp;search=" target="_blank">搞笑</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=%E5%A8%B1%E4%B9%90&amp;search=" target="_blank">娱乐</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=MySQL&amp;search=" target="_blank">MySQL</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=PHP&amp;search=" target="_blank">PHP</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=dedeCMS&amp;search=" target="_blank">dedeCMS</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=%E5%BC%A0%E5%85%B5&amp;search=" target="_blank">张兵</a></li>
+                        <li><a href="http://www.zbboke.com/plus/search.php?q=%E5%8D%9A%E5%AE%A2&amp;search=" target="_blank">博客</a></li>
+                    </ul>
+                </div>
+            </div>
+            <style>
+                .rmpl{
+                    padding: 11px 15px 14px;
+                    border-bottom: 1px solid #eaeaea;
+                    background-color: #fbfbfb;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 20px;
+                }
+                .pinglun{
+                    background:#fff;
+                }
+                #cyHotusers{width:290px;height: 393px;
+                    overflow: hidden;}
+                #cyHotusers .hotusers-header{padding:0px !important;}
+            </style>
+            <div class="pinglun" style="border-radius:5px;      box-shadow: 0 1px 3px rgba(0, 0, 0, .1);">
+                <h3 class="rmpl">热评评论</h3>
+                <div id="cyReping" role="cylabs" data-use="reping"><div id="cyWrapper" class="cy-wrapper">
+                    <div class="reping-header hide" style="background-color:"><span style="color:#ff0000">精彩评论</span></div>
+                    <ul class="reping-list">
+                        <li class="list-item">
+                            <div class="reping-avatar   "><img width="50px" height="50px" src="" title="留言 - 給自己一个机会我要让世界认识自己✿" data-bd-imgshare-binded="1"></div>
+                            <div class=" contavatar  ">
+                                <span class="reping-nickname">陌生人</span>
+                                <span class="reping-content">emmmm..........</span>
+                                <span class="reping-title"><a href="http://www.zbboke.com/ly/" target="_blank" title="留言 - 給自己一个机会我要让世界认识自己✿">评:留言 - 給自己一个机会</a></span>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <div class="reping-avatar   ">
+                                <img width="50px" height="50px" src="" title="用SVG换出拼图块，并实现拼图功能，请收下我的膝盖_张兵个人博客" data-bd-imgshare-binded="1"></div>
+                            <div class=" contavatar  ">
+                                <span class="reping-nickname">凡尘清心</span>
+                                <span class="reping-content">sadfad的说法是
+</span>
+                                <span class="reping-title"><a href="http://www.zbboke.com/yl/753.html" target="_blank" title="用SVG换出拼图块，并实现拼图功能，请收下我的膝盖_张兵个人博客">评:用SVG换出拼图块，并实</a></span>
+                            </div>
+                        </li>
+                        <li class="list-item">
+                            <div class="reping-avatar   ">
+                                <img width="50px" height="50px" src="" title="用SVG换出拼图块，并实现拼图功能，请收下我的膝盖_张兵个人博客" data-bd-imgshare-binded="1"></div>
+                            <div class=" contavatar  ">
+                                <span class="reping-nickname">凡尘清心</span>
+                                <span class="reping-content">8456456</span>
+                                <span class="reping-title"><a href="http://www.zbboke.com/yl/753.html" target="_blank" title="用SVG换出拼图块，并实现拼图功能，请收下我的膝盖_张兵个人博客">评:用SVG换出拼图块，并实</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div></div>
+            </div>
+            </p>
+
+            </div>
+            <div class="widget d_textbanner" style="margin-top:10px; float: left; width:290px; min-height: 110px;box-shadow: 0 1px 3px rgba(0, 0, 0, .1);">
+                <a class="style03" href="http://www.zbboke.com/lxw/">
+                    <strong>申请链接</strong></a>
+                <ul class="friendlyLink">
+
+                    <li><a href="http://www.mywhblog.cn/" target="_blank">梦影雾花个人博客</a> </li><li>
+                    <a href="http://www.liqinghe.com/" target="_blank">java程序员个人博客</a> </li>
+                    <li><a href="http://guminfeng.cn/" target="_blank">顾敏锋博客</a> </li>
+                    <li><a href="http://www.yinhuafeng.cn/" target="_blank">尹华峰博客</a> </li>
+                    <li><a href="http://www.iwuhe.cn/" target="_blank">衍帝博客</a> </li>
+                    <li><a href="http://www.bobcoder.cc/" target="_blank">Bob的博客</a> </li>
+                    <li><a href="http://www.loveif.com/" target="_blank">晓兔个人博客</a> </li>
+                    <li><a href="http://www.dbgseo.com/" target="_blank">深圳seo</a> </li>
+                </ul>
+            </div>
+            <div class="widget d_textbanner" style="float:left;">
+                <a class="style03" target="_blank">
+                    <strong>广告位</strong>
+                    <img class="gg" src="" data-bd-imgshare-binded="1">
+                </a>
+            </div>
+            <style>
+                .bdsharebuttonbox {
+                    margin-left: 10px;
+                }
+                .friendlyLink{
+                    float: left; width:290px; min-height: 110px;
+                }
+                .friendlyLink a{
+                    display: block;
+                    width: 118px;
+                    height: 35px;
+                    float: left;
+                    border: 1px #5CB85C solid;
+                    padding: 0px !important;
+                    line-height: 35px;
+                    text-align: center;
+                    color: #5CB85C;
+                    transition: all 0.5s;
+                    margin: 0px 12.5px 10px 12.5px;
+                }
+                .friendlyLink li a:hover {
+                    color: #fff;
+                    border-radius: 40px 0px;
+                    background: #5CB85C;
+                    color: #fff!important;
+                }
+            </style>
+        </aside>
+    </section>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div style="padding:0 20px;overflow:hidden;">
+                <div class="copyright pull-left">
+
+                    <a href="http://www.zbboke.com/about/">关于</a> |
+
+                    <a href="http://www.zbboke.com/xx/">学习</a> |
+
+                    <a href="http://www.zbboke.com/tp/">娱乐</a> |
+
+                    <a href="http://www.zbboke.com/cz/">成长</a> |
+
+                   <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">苏ICP备16050559号</a>
+                    <a target="_blank" href="http://www.zbboke.com/sitemap.htm">网站地图</a>
+                </div>
+                <div class="trackcode pull-right">
+                    <span id="cnzz_stat_icon_1260588650">
+                    <a href="https://www.cnzz.com/stat/website.php?web_id=1260588650" target="_blank">站长统计</a>
+                    <a href="https://www.cnzz.com/stat/website.php?web_id=1260588650" target="_blank"> |  今日IP[17] |  </a>
+                    <a href="https://www.cnzz.com/stat/website.php?web_id=1260588650&amp;method=online" target="_blank">当前在线[2]</a>
+                </span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <div id="toTop">
+        <ul>
+            <li class="backBtn" title="返回顶部" style="display: list-item;">
+                <a href="javascript:;" class="icon_backTo"></a>
+            </li>
+        </ul>
+    </div>
+    </body>
+</html>
