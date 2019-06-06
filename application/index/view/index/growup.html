@@ -186,13 +186,13 @@
                </hr>
                 <article class="excerpt" style="padding: 20px 20px 0 256px; ">
                     <div class="focus">
-                        <a href="{:url('index/Index/study')}" class="thumbnail" target="_blank">
+                        <a href="{:url('index/Index/study',['id'=>$v['id']])}" class="thumbnail" target="_blank">
                             <img src="" alt="" title="" data-bd-imgshare-binded="1">
                         </a>
                     </div>
                     <header>
                         <h2>
-                            <a href="{:url('index/Index/study')}" title="" target="_blank">{$v.title}</a>
+                            <a href="{:url('index/Index/study',['id'=>$v['id']])}" title="" target="_blank">{$v.title}</a>
                         </h2>
                     </header>
                     <a class="note" href="">{$v.content|raw}</a>

@@ -23,8 +23,12 @@ class Index extends Controller
         return $this->fetch();
     }
 
+
+//    添加分类
+
     public function addCategory()
     {
+
         $res = $this->request;
         if ($res->isGet()) {
             $pid = $res->param('id', 0);
@@ -110,7 +114,8 @@ class Index extends Controller
                         <td class="text-center">{$v['id']}</td>
                         <td>{$space}|--{$v['name']}</td>
                         <td class="text-center"><a href="{$url}">添加</a></td>
-                        <td class="text-center"><a data-id="{$v['id']}" class="point-e children" data-op="plus"><i class="fa fa-plus"></i></a></td>
+                        <td class="text-center"><a data-id="{$v['id']}" class="point-e children" data-op="plus">
+                        <i class="fa fa-plus"></i></a></td>
                     </tr>
 DDDD;
             }
@@ -126,10 +131,8 @@ DDDD;
     public function categoryTree()
     {
         $all = category::select()->toArray();
-
         $new = $this->toTree($all);
 
-//        print_r($new);
         $this->assign('data', json_encode($new));
         return $this->fetch();
     }
@@ -143,9 +146,7 @@ DDDD;
     protected function toTree($data, $pid = 0)
     {
         $newData = [];
-
         foreach ($data as $v){
-
             if ($v['pid'] == $pid){
                 //找儿子们
                 $v['text'] = $v['name'];

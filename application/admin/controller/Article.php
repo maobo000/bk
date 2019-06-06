@@ -206,7 +206,7 @@ class Article extends Controller
                 $info =  [
                     "originalName" => $res->getFilename() ,
                     "name" => $res->getSaveName() ,
-                    "url" => $res->getPathname() ,
+                    "url" => '/'.$res->getPathname() ,
                     "size" => $res->getSize() ,
                     "type" => $res->getExtension() ,
                     "state" => 'SUCCESS'

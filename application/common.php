@@ -10,3 +10,9 @@
 // +----------------------------------------------------------------------
 
 // 应用公共文件
+
+
+function userIfo(){
+    $info = session('userLoginInfo');
+    return $info ? $info : false;
+}

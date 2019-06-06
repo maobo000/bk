@@ -11,6 +11,9 @@
     <!--头部开始-->
     <header class="header" style="position: fixed; top: 0px; left: 0px; z-index: 999;">
         <div class="navbar">
+            <p class="logo">
+
+            </p>
             <ul class="nav">
                 <li class="menu-item menu-item-type-custom menu-item-object-custom  menu-item-home">
                     <a href="{:url('index/Index/growup')}">首页</a></li>
@@ -39,15 +42,16 @@
 
                 　　<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children">
                 <a href="{:url('index/Index/pl')}">留言</a></li>
+
             </ul>
             <div class="menu pull-right">
-                <form name="formsearch" action="http://www.zbboke.com/plus/search.php" method="get">
+                <form name="formsearch" action="{:url('index/Index/growup')}" method="get">
                     <input class="search-input" name="q" type="text" id="search-keyword" value="" required="required" placeholder=" 输入你要找的内容">
-                    <button type="submit" class="searchbtn search-submit" name="search" title="搜一下">
+                    <!--<button type="submit" class="searchbtn search-submit" name="search" title="搜一下" style="background: url(/blgos/public/static/img/2.png) no-repeat 0 6px;">-->
+                    <button type="submit">so</button>
                         <i class="fa"></i>
                     </button>
                 </form>
-
             </div>
         </div>
     </header>
